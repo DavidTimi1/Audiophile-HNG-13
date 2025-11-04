@@ -1,0 +1,356 @@
+@import "tailwindcss";
+
+/* ---------------------------------------
+   Audiophile Design System (Tailwind v4)
+   CSS-first configuration via @theme
+   --------------------------------------- */
+@theme {
+  /* Use ONLY your tokens (optional: clear defaults) */
+  /* --*: initial;  */
+
+  /* Fonts */
+  --font-sans: Manrope, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* Breakpoints (desktop width = 1440px) */
+  --breakpoint-2xl: 90rem;
+  /* 1440px */
+
+  /* Colors (from Figma) */
+  --color-primary: #D87D4A;
+  /* brand orange */
+  --color-primary-soft: #FBAF85;
+  /* soft peach */
+  --color-ink-900: #101010;
+  /* near-black text */
+  --color-ink-100: #F1F1F1;
+  /* light gray bg */
+  --color-ink-50: #FAFAFA;
+  /* off-white */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-error: #CD2C2C;
+  --color-deep-black: #0C0C0C;
+
+  /* Radius */
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+
+  /* Shadows */
+  --shadow-card: 0 10px 20px rgba(0, 0, 0, 0.08);
+  --shadow-focus: 0 0 0 2px color-mix(in oklab, var(--color-primary) 25%, transparent);
+
+  /* Typography scale (sizes + line-heights + tracking) */
+  --text-h1: 56px;
+  --leading-h1: 58px;
+  --tracking-h1: 2px;
+  /* H1 */
+  --text-h2: 40px;
+  --leading-h2: 44px;
+  --tracking-h2: 1.5px;
+  /* H2 */
+  --text-h3: 32px;
+  --leading-h3: 36px;
+  --tracking-h3: 1.15px;
+  /* H3 */
+  --text-h4: 28px;
+  --leading-h4: 38px;
+  --tracking-h4: 2px;
+  /* H4 */
+  --text-h5: 24px;
+  --leading-h5: 33px;
+  --tracking-h5: 1.7px;
+  /* H5 */
+  --text-h6: 18px;
+  --leading-h6: 24px;
+  --tracking-h6: 1px;
+  /* H6 */
+
+  --text-overline: 14px;
+  --leading-overline: 19px;
+  --tracking-overline: 10px;
+  --text-subtitle: 13px;
+  --leading-subtitle: 25px;
+  --tracking-subtitle: 1px;
+
+  --text-body: 15px;
+  --leading-body: 25px;
+}
+
+/* Base tweaks */
+html,
+body {
+  color: var(--color-ink-900);
+  background: var(--color-white);
+  margin:0;
+  padding: 0;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-primary) 20%, transparent);
+}
+
+/* ---------------------------------------
+   Heading utilities (uppercase + tracking)
+   --------------------------------------- */
+
+.container {
+  max-width: 1110px;
+  margin: auto
+}
+
+@utility heading-1 {
+  font-size: var(--text-h1);
+  line-height: var(--leading-h1);
+  letter-spacing: var(--tracking-h1);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@utility heading-2 {
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  letter-spacing: var(--tracking-h2);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@utility heading-3 {
+  font-size: var(--text-h3);
+  line-height: var(--leading-h3);
+  letter-spacing: var(--tracking-h3);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@utility heading-4 {
+  font-size: var(--text-h4);
+  line-height: var(--leading-h4);
+  letter-spacing: var(--tracking-h4);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@utility heading-5 {
+  font-size: var(--text-h5);
+  line-height: var(--leading-h5);
+  letter-spacing: var(--tracking-h5);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@utility heading-6 {
+  font-size: var(--text-h6);
+  line-height: var(--leading-h6);
+  letter-spacing: var(--tracking-h6);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.overline {
+  font-size: var(--text-overline);
+  line-height: var(--leading-overline);
+  letter-spacing: var(--tracking-overline);
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+@utility subtitle {
+  font-size: var(--text-subtitle);
+  line-height: var(--leading-subtitle);
+  letter-spacing: var(--tracking-subtitle);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@utility body {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  font-weight: 500;
+  color: var(--color-ink-900);
+}
+
+/* ---------------------------------------
+   Buttons (btn, btn-primary/secondary/ghost)
+   --------------------------------------- */
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding-inline: 24px;
+  border-radius: 0;
+  /* matches Figma square buttons */
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 13px;
+  transition: all .2s ease;
+}
+
+@utility btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  &:hover {
+    background: var(--color-black);
+  }
+}
+
+@utility btn-secondary {
+  background: var(--color-ink-900);
+  color: var(--color-white);
+
+  &:hover {
+    background: var(--color-primary);
+  }
+}
+
+@utility btn-ghost {
+  background: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+
+  &:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+}
+
+/* ---------------------------------------
+   Form elements: inputs, radios, qty
+   --------------------------------------- */
+@utility input {
+  display: block;
+  width: 100%;
+  height: 56px;
+  padding-inline: 24px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-ink-100);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  outline: none;
+  transition: all .15s ease;
+
+  &::placeholder {
+    color: color-mix(in oklab, var(--color-ink-900) 50%, transparent);
+  }
+
+  &:focus {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-focus);
+  }
+}
+
+@utility input-error {
+  border-color: var(--color-error);
+
+  &:focus {
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-error) 20%, transparent);
+  }
+}
+
+@utility radio {
+  display: grid;
+  grid-template-columns: 20px auto;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-ink-100);
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+@utility radio--active {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+@utility qty {
+  display: inline-grid;
+  grid-template-columns: 24px 40px 24px;
+  align-items: center;
+  height: 48px;
+  background: var(--color-ink-100);
+  user-select: none;
+}
+
+@utility qty__btn {
+  display: grid;
+  place-items: center;
+  height: 48px;
+  width: 24px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #9F9F9F;
+  cursor: pointer;
+  transition: color .15s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+@utility qty__value {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* ---------------------------------------
+   Surfaces / helpers
+   --------------------------------------- */
+@utility surface {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+@utility section-muted {
+  background: var(--color-ink-50);
+}
+
+.tf {
+  @apply w-full rounded-md border border-black/20 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.overline {
+  @apply text-[13px] tracking-[3px] uppercase font-bold;
+}
+
+.radio {
+  @apply flex items-center gap-3 border border-black/20 rounded-md px-4 py-3;
+}
+
+.qty {
+  @apply inline-flex items-center bg-ink-100 rounded;
+}
+
+.qty__btn {
+  @apply px-3 py-2 text-black/60 hover:text-black;
+}
+
+.qty__value {
+  @apply px-3 font-semibold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
