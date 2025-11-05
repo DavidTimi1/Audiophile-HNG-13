@@ -5,24 +5,24 @@ import { chooseResponsiveImage } from './utils';
 
 // Data extraction functions
 export function getProducts(): Product[] {
-    return productsData.data;
+    return productsData.data as Product[];
 }
 
 export function getProductBySlug(slug: string): Product | undefined {
-    return productsData.data.find(product => product.slug === slug);
+    return productsData.data.find(product => product.slug === slug) as Product | undefined;
 }
 
 export function getProductsByCategory(category: CategoryKey): Product[] {
-    return productsData.data.filter(product => product.category === category);
+    return productsData.data.filter(product => product.category === category) as Product[];
 }
 
 export function getNewProducts(): Product[] {
-    return productsData.data.filter(product => product.new);
+    return productsData.data.filter(product => product.new) as Product[];
 }
 
 export function getSimilarProducts(productSlug: string): ProductBrief[] {
     const product = getProductBySlug(productSlug);
-    return product?.others || [];
+    return product?.others || [] as ProductBrief[];
 }
 
 // Category summary for navigation/display
@@ -33,12 +33,13 @@ export type CategorySummary = {
 };
 
 export function getCategorySummaries(): CategorySummary[] {
-    const categories = getCategories();
-    return categories.map(category => ({
+    const categories = getCategories().map(cat => cat.label.toLowerCase() as CategoryKey);
+    const summary = categories.map(category => ({
         key: category,
         name: category.charAt(0).toUpperCase() + category.slice(1),
         count: getProductsByCategory(category).length
-    }));
+    }))
+    return summary as CategorySummary[];
 }
 
 // Category navigation item
