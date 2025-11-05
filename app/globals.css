@@ -87,6 +87,11 @@ body {
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 ::selection {
   background: color-mix(in oklab, var(--color-primary) 20%, transparent);
 }
@@ -353,4 +358,17 @@ body {
 
 button {
   cursor: pointer;
+}
+
+.animate-render {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 0.4s .2s ease-in-out;
+
+  @starting-style {
+    & {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+  }
 }

@@ -7,7 +7,7 @@ import AboutSection from "./components/home/AboutSection";
 
 export default function Home() {
   return (
-    <section>
+    <section className="animate-render">
       <Hero />
 
       <CategoryGrid />
