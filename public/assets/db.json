@@ -22,23 +22,23 @@
       "includes": [
         {
           "quantity": 2,
-          "item": "Earphone unit"
+          "label": "Earphone unit"
         },
         {
           "quantity": 6,
-          "item": "Multi-size earplugs"
+          "label": "Multi-size earplugs"
         },
         {
           "quantity": 1,
-          "item": "User manual"
+          "label": "User manual"
         },
         {
           "quantity": 1,
-          "item": "USB-C charging cable"
+          "label": "USB-C charging cable"
         },
         {
           "quantity": 1,
-          "item": "Travel pouch"
+          "label": "Travel pouch"
         }
       ],
       "gallery": {
@@ -110,19 +110,19 @@
       "includes": [
         {
           "quantity": 1,
-          "item": "Headphone unit"
+          "label": "Headphone unit"
         },
         {
           "quantity": 2,
-          "item": "Replacement earcups"
+          "label": "Replacement earcups"
         },
         {
           "quantity": 1,
-          "item": "User manual"
+          "label": "User manual"
         },
         {
           "quantity": 1,
-          "item": "3.5mm 5m audio cable"
+          "label": "3.5mm 5m audio cable"
         }
       ],
       "gallery": {
@@ -194,19 +194,19 @@
       "includes": [
         {
           "quantity": 1,
-          "item": "Headphone unit"
+          "label": "Headphone unit"
         },
         {
           "quantity": 2,
-          "item": "Replacement earcups"
+          "label": "Replacement earcups"
         },
         {
           "quantity": 1,
-          "item": "User manual"
+          "label": "User manual"
         },
         {
           "quantity": 1,
-          "item": "3.5mm 5m audio cable"
+          "label": "3.5mm 5m audio cable"
         }
       ],
       "gallery": {
@@ -278,23 +278,23 @@
       "includes": [
         {
           "quantity": 1,
-          "item": "Headphone unit"
+          "label": "Headphone unit"
         },
         {
           "quantity": 2,
-          "item": "Replacement earcups"
+          "label": "Replacement earcups"
         },
         {
           "quantity": 1,
-          "item": "User manual"
+          "label": "User manual"
         },
         {
           "quantity": 1,
-          "item": "3.5mm 5m audio cable"
+          "label": "3.5mm 5m audio cable"
         },
         {
           "quantity": 1,
-          "item": "Travel bag"
+          "label": "Travel bag"
         }
       ],
       "gallery": {
@@ -366,23 +366,23 @@
       "includes": [
         {
           "quantity": 2,
-          "item": "Speaker unit"
+          "label": "Speaker unit"
         },
         {
           "quantity": 2,
-          "item": "Speaker cloth panel"
+          "label": "Speaker cloth panel"
         },
         {
           "quantity": 1,
-          "item": "User manual"
+          "label": "User manual"
         },
         {
           "quantity": 1,
-          "item": "3.5mm 7.5m audio cable"
+          "label": "3.5mm 7.5m audio cable"
         },
         {
           "quantity": 1,
-          "item": "7.5m optical cable"
+          "label": "7.5m optical cable"
         }
       ],
       "gallery": {
@@ -454,23 +454,23 @@
       "includes": [
         {
           "quantity": 2,
-          "item": "Speaker unit"
+          "label": "Speaker unit"
         },
         {
           "quantity": 2,
-          "item": "Speaker cloth panel"
+          "label": "Speaker cloth panel"
         },
         {
           "quantity": 1,
-          "item": "User manual"
+          "label": "User manual"
         },
         {
           "quantity": 1,
-          "item": "3.5mm 10m audio cable"
+          "label": "3.5mm 10m audio cable"
         },
         {
           "quantity": 1,
-          "item": "10m optical cable"
+          "label": "10m optical cable"
         }
       ],
       "gallery": {
